@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { add, clear } from '../../redux/actions/count';
 
+// UI组件
 class Count extends Component {
     add = () => {
         // 通知redux
@@ -22,6 +23,7 @@ class Count extends Component {
     }
 }
 
+// 暴露容器组件
 export default connect(
     // 1.状态
     state => ({ count: state.sum, flag: state.flagState }),
